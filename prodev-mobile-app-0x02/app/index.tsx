@@ -1,14 +1,17 @@
-import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import {
-  ImageBackground,
   Dimensions,
-  View,
+  Image,
+  ImageBackground,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  Image,
+  View,
 } from "react-native";
-import { StyleSheet } from "react-native";
-export default function App() {
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+
+const { height } = Dimensions.get("window");
+
+export default function Index() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
@@ -17,29 +20,37 @@ export default function App() {
           style={styles.background}
           resizeMode="cover"
         >
-          <View style={styles.companyLogo}>
-            <Image source={require("@/assets/images/Logo.png")} />
+          <View style={styles.container}>
+            <View style={styles.companyLogo}>
+              <Image source={require("@/assets/images/Logo.png")} />
+            </View>
+
+            <View style={styles.textGroup}>
+              <Text style={styles.textLarge}>
+                Find your favorite place here
+              </Text>
+              <Text style={styles.textSmall}>The best prices for over 2 </Text>
+              <Text style={styles.textSmall}>million properties worldwide</Text>
+            </View>
+
+            <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
+              <View style={styles.buttonGroup}>
+                <TouchableOpacity style={styles.button}>
+                  <Text style={{ ...styles.textSmall, color: "black" }}>
+                    Join here
+                  </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.transparentButton}>
+                  <Text style={styles.textSmall}>Sign In</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={{ alignItems: "center", paddingVertical: 20 }}>
+                <Text style={{ color: "white" }}>Continue to home</Text>
+              </View>
+            </View>
           </View>
         </ImageBackground>
-        <View style={styles.textGroup}>
-          <Text style={styles.textLarge}>Find your favorite place here</Text>
-          <Text style={styles.textSmall}>The best prices for over 2 </Text>
-          <Text style={styles.textSmall}>million properties worldwide</Text>
-        </View>
-        <View style={styles.buttonGroup}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{ ...styles.textSmall, color: "black" }}>
-              Join here
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.transparentButton}>
-            <Text style={styles.textSmall}>Sign In</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={{ alignItems: "center", paddingVertical: 20 }}>
-          <Text style={{ color: "white" }}>Continue to home</Text>
-        </View>
       </SafeAreaView>
     </SafeAreaProvider>
   );
