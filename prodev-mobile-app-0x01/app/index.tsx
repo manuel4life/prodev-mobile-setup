@@ -12,8 +12,6 @@ export default function Index() {
         React Native provides you a single codebase for cross platforms
       </Text>
       <Text style={styles.smallText}>ALX is awesome</Text>
-
-      {/* Additional Text Components */}
       <Text style={styles.boldText}>Learning never stops</Text>
       <Text style={styles.italicText}>Practice makes perfect</Text>
       <Text style={styles.underlineText}>Consistency is key</Text>
