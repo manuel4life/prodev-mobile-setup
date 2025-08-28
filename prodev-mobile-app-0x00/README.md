@@ -1,67 +1,50 @@
-# First Expo Router App
+# Welcome to your Expo app 👋
 
-## Objective
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-Set up the first mobile application using the Expo Router template and understand the file structure of a React Native app.
+## Get started
 
-## Steps Followed
-
-1. Navigated to the parent directory:
+1. Install dependencies
 
    ```bash
-   cd prodev-mobile-setup
-
-    Initialized a new Expo project with Router template:
+   npm install
    ```
 
-npx create-expo-app@latest .
+2. Start the app
 
-Selected the Expo Router (TypeScript) template.
+   ```bash
+   npx expo start
+   ```
 
-Modified the Home Screen:
+In the output, you'll find options to open the app in a
 
-    Edited app/(tabs)/index.tsx
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-    Changed text from Welcome! to:
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-    <Text>** First App Created**</Text>
+## Get a fresh project
 
-Started the development server:
+When you're ready, run:
 
-npx expo start
+```bash
+npm run reset-project
+```
 
-    Scanned the QR code with Expo Go app to preview on mobile.
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-Reset the project with:
+## Learn more
 
-    npm run reset-project
+To learn more about developing your project with Expo, look at the following resources:
 
-Observations
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-    The initial scaffold created the following structure:
+## Join the community
 
-        app/ → contains all screens and navigation logic.
+Join our community of developers creating universal apps.
 
-        app/(tabs)/index.tsx → default home screen.
-
-        constants/Colors.tsx → stores color themes.
-
-    Running npm run reset-project:
-
-        Cleared cache and dependencies.
-
-        Reinstalled node_modules.
-
-        Restored the project to a clean state (like freshly scaffolded).
-
-Files Modified
-
-    app-example/app/(tabs)/index.tsx
-
-    app-example/constants/Colors.tsx
-
-Next Steps
-
-    Explore routing features inside app/.
-
-    Learn how to add more tabs and customize navigation.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
